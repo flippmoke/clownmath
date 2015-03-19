@@ -30,7 +30,7 @@ var p1evl = function(x, p) {
 }
 
 exports.tan = function(xx) {
-    // Only works between -PI/4 and PI/4 shift values into this range!
+    // Only works between -PI/2 and PI/2 shift values into this range!
     while (xx > Math.PI/2) {
         xx = xx - Math.PI;   
     }
