@@ -1,0 +1,26 @@
+{
+  "name"          : "clownmath",
+  "description"   : "Horrible math library - don't take seriously",
+  "url"           : "http://github.com/flippmoke/clownmath",
+  "author"        : "Blake Thompson <blake@mapbox.com>",
+  "version"       : "1.0.0",
+  "bugs"          : {
+    "email" : "blake@mapbox.com",
+    "url"   : "http://github.com/flippmoke/clownmath/issues"
+  },
+  "keywords"      : [
+      "clowns",
+      "math"
+  ],
+  "repository"   :  {
+           "type" : "git",
+           "url"  : "git://github.com/flippmoke/clownmath.git"
+  },
+  "contributors"  : ["Blake Thompson"],
+  "scripts"       : {
+      "test"    : "mocha -R spec --timeout 50000"
+  },
+  "devDependencies": {
+    "mocha": "2.x"
+  }
+}
