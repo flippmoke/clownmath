@@ -30,19 +30,6 @@ var p1evl = function(x, p) {
 }
 
 exports.tan = function(xx) {
-    // Only works between -PI/2 and PI/2 shift values into this range!
-    while (xx > Math.PI/2) {
-        xx = xx - Math.PI;   
-    }
-    while (xx < -Math.PI/2) {
-        xx = xx + Math.PI;   
-    }
-    if (xx == Math.PI/2) {
-        return Number.POSITIVE_INFINITY;
-    }
-    if (xx == -Math.PI/2) {
-        return Number.NEGATIVE_INFINITY;
-    }
     if (xx == 0) {
         return 0;
     }
@@ -53,6 +40,9 @@ exports.tan = function(xx) {
     } else {
         x = xx;
         sign = true;
+    }
+    if ((x % (Math.PI/2)) < 1e-18 ) {
+        return Number.NaN;
     }
     if( x > lossth ) {
         throw "Holy crap this won't work";
