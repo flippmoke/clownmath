@@ -2,4 +2,8 @@ language: node_js
 node_js:
   - "0.10"
 sudo: false
-script: npm test
+script: 
+ - npm install coveralls
+ - npm install istanbul
+ - ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec -s 200 --timeout 50000
+ - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
